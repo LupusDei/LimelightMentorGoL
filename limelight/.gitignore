@@ -1,0 +1,7 @@
+classes
+*.iml
+*.ipr
+*.iws
+pkg
+out
+*.DS_Store
