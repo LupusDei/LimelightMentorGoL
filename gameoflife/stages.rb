@@ -9,9 +9,9 @@
 #    size [300, 800]
 #  end
 
-stage "gof" do
-  default_scene "default_scene"
+stage "grid" do
+  default_scene "grid"
   title "Game Of Life"
   location [200, 25]
-  size [400, 400]
+  size [800, 800]
 end
