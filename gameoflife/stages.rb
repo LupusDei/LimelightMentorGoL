@@ -12,6 +12,6 @@
 stage "grid" do
   default_scene "grid"
   title "Game Of Life"
-  location [200, 25]
-  size [800, 800]
+  location [0, 0]
+  size [600, 600]
 end

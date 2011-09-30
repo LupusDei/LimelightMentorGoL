@@ -4,6 +4,7 @@
 
 module Production
 
+  attr_accessor :simulation, :update_thread
 #  # Define this method if you want the production name to be different from the default, directory name.
 #  def name
 #    return "Gameoflife"
@@ -22,8 +23,11 @@ module Production
 #
 #  # Hook #1.  Called when the production is newly created, before any loading has been done.
 #  # This is a good place to require needed files and instantiate objects in the business layer.
-#  def production_opening
-#  end
+  def production_opening
+    $: << File.expand_path(File.join(File.dirname(__FILE__), "lib"))
+    require "simulation"
+    @simulation = Simulation.new
+  end
 #
 #  # Hook #2.  Called after internal gems have been loaded and stages have been instantiated, yet before
 #  # any scenes have been opened.

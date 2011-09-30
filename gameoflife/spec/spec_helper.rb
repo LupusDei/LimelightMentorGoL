@@ -7,6 +7,8 @@ require File.expand_path(File.dirname(__FILE__) + "/../../../limelight/lib/limel
 $PRODUCTION_PATH = File.expand_path(File.dirname(__FILE__) + "/../")
 Gem.use_paths(File.join($PRODUCTION_PATH , "__resources", "gems"), Gem.default_path)
 
+$: << File.expand_path(File.dirname(__FILE__) + "/../lib")
+
 Dir.glob(File.join( "**", "lib", "grid")).each do |dir|
   $: << dir
 end
